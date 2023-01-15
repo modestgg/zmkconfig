@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define RAISE   1
-#define LOWER   2
+#define NUM_SYM 1
+#define NAV     2
 
 / {
     behaviors {
@@ -21,9 +21,6 @@
             tapping-term-ms = <225>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
-        &mt {
-              tapping-term-ms = <400>;
         };
     };
 };
@@ -40,7 +37,7 @@
     &kp LCTRL  &kp LGUI   &kp LALT       &lt RAISE SPACE   &kp SPACE   &lt LOWER RALT   &kp SQT    &kp FSLH
             >;
         };
-        RAISE {
+        num_sym {
             bindings = <
     &kp N1     &kp N2        &kp N3       &kp N4     &kp N5   &kp N6   &kp N7     &kp N8      &kp N9    &kp N0
     &kp TAB    &kp MINUS     &kp EQUAL    &kp LBKT   &kp RBKT &kp BSLH &trans     &trans      &kp SEMI &kp SQT
@@ -49,7 +46,7 @@
             >;
         };
 
-        LOWER {
+        nav {
             bindings = <
     &bt BT_CLR &bt BT_NXT &bt BT_PRV &none       &none &none &none       &kp UP       &none     &kp BSPC
     &trans     &trans     &trans     &trans      &none &none &kp LEFT    &kp DOWN     &kp RIGHT &none
@@ -66,16 +63,6 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-        };
-        combo_bspc {
-            timeout-ms = <50>;
-            key-positions = <9 10>;
-            bindings = <&kp BSPC>;
-        };
-            combo_ret {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&kp RET>;
         };
     };
 };
