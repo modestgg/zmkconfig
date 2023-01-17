@@ -33,28 +33,28 @@
 
         default_layer {
             bindings = <
-            &kp Q     &kp W     &kp E        &kp R        &kp T       &kp Y    &kp U        &kp I           &kp O    &kp P
-            &kp A     &kp S     &kp D        &kp F        &kp G       &kp H    &kp J        &kp K           &kp L  &kp RET
- &mt LEFT_SHIFT Z     &kp X     &kp C        &kp V        &kp B       &kp N    &kp M    &kp COMMA  &mt RSHIFT DOT
-        &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &lt 1 SPACE  &lt 2 RALT  &kp SQT  &lt 3 RCTRL
+            &kp Q   &kp W     &kp E        &kp R        &kp T       &kp Y   &kp U        &kp I           &kp O    &kp P
+            &kp A   &kp S     &kp D        &kp F        &kp G       &kp H   &kp J        &kp K           &kp L  &kp RET
+ &mt LEFT_SHIFT Z   &kp X     &kp C        &kp V        &kp B       &kp N   &kp M    &kp COMMA  &mt RSHIFT DOT
+        &kp LCTRL   &none  &kp LALT  &lt 1 SPACE  &lt 1 SPACE  &lt 2 RALT   &none  &lt 3 RCTRL
             >;
         };
 
         num_sym {
             bindings = <
-      &kp N1        &kp N2        &kp N3    &kp N4    &kp N5   &kp N6     &kp N7    &kp N8     &kp N9     &kp N0
-      &trans        &trans        &trans    &trans    &trans   &trans     &trans    &trans  &kp EQUAL  &kp MINUS
-      &trans  &kp C_VOL_UP  &kp C_VOL_DN  &kp LEFT  &kp DOWN   &kp UP  &kp RIGHT    &trans   &kp FSLH
- &bootloader        &reset         &none    &trans    &trans  &kp RET     &trans  &kp FSLH
+  &kp N1        &kp N2        &kp N3            &kp N4             &kp N5         &kp N6     &kp N7    &kp N8            &kp N9  &kp N0
+ &kp TAB     &kp MINUS     &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH     &trans  &kp SEMI  &kp SINGLE_QUOTE   &none
+  &trans  &kp C_VOL_UP  &kp C_VOL_DN          &kp LEFT           &kp DOWN         &kp UP  &kp RIGHT    &trans          &kp FSLH
+  &trans        &trans        &trans            &trans             &trans         &trans     &trans    &trans
             >;
         };
 
         nav {
             bindings = <
- &bt BT_CLR  &bt BT_NXT  &bt BT_PRV   &none   &none   &none     &none    &kp UP      &none  &kp BSPC
-     &trans      &trans      &trans  &trans   &none   &none  &kp LEFT  &kp DOWN  &kp RIGHT     &none
-      &none       &none       &none   &none   &none   &none     &none     &none      &none
-      &none       &none       &none  &trans  &trans   &none    &trans    &trans
+ &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &none   &none     &none    &kp UP      &none  &kp BSPC
+   &bt BT_PRV    &bt BT_NXT        &trans        &trans   &none   &none  &kp LEFT  &kp DOWN  &kp RIGHT     &none
+        &none         &none         &none         &none   &none   &none     &none     &none      &none
+   &bt BT_CLR         &none         &none        &trans  &trans   &none    &trans    &trans
             >;
         };
 
